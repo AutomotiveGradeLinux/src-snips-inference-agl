@@ -119,7 +119,7 @@ class LogRegIntentClassifier(IntentClassifier):
     def _predict_proba(self, X):  # pylint: disable=C0103
         import numpy as np
 
-        self.classifier._check_proba()  # pylint: disable=W0212
+        # self.classifier._check_proba()  # pylint: disable=W0212
 
         prob = self.classifier.decision_function(X)
         prob *= -1
